@@ -1,0 +1,5 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <button class="button" name="add_customer" bindtap="bindCustomerTap" style='margin-top:30rpx;'>新增客户</button>
+  <button class="button" name="add_creditcard" bindtap="bindCreditcardTap" style='margin-top:30rpx;'>新增银行卡</button>
+</view>

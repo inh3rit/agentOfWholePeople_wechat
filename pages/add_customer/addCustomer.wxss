@@ -1,0 +1,46 @@
+/* pages/add_customer/addCustomer.wxss */
+
+.page {
+  font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yahei',
+                 sans-serif;
+  height: 100%;
+}
+
+.column {
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin: 40rpx 0rpx 0rpx 2.5%;
+  width: 95%;
+  padding: 15rpx 0rpx 15rpx 0rpx;
+  background: #fbfbfb;
+}
+
+.inputColumn {
+  width: 55%;
+  font-size: 35rpx;
+}
+
+.tip {
+  font-size: 35rpx;
+  color: black;
+  width: 140rpx;
+  text-align: right
+}
+
+.button {
+  width: 90%;
+  height: 90rpx;
+  background-color: #69c3aa;
+  border-radius: 5px;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

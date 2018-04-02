@@ -1,0 +1,31 @@
+<!--pages/add_customer/addCustomer.wxml-->
+<view class="page">
+  <form bindsubmit="addSuccess" report-submit="true">
+    <view class="column">
+      <text class="tip">姓名：</text>
+      <view class="inputColumn">
+        <input bindblur="inputNameRight" placeholder='请输入姓名' name="name" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class="column">
+      <text class="tip">手机：</text>
+      <view class="inputColumn">
+        <input type="number" placeholder='请输入手机号码' bindblur="inputCardNumRight" name="telephone" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class='column'>
+      <text class='tip'>性别：</text>
+      <radio-group name="sex" class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view class="column">
+      <view class="inputColumn">
+        <textarea placeholder='客户描述说明，如客户意向户型、面积等' bindblur="inputCardNumRight" name="description" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <button class="button" formType="submit" style='margin-top:30rpx;'>确定</button>
+  </form>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/add_creditcard/addCreditcard.wxml-->
+<view class="page">
+  <form bindsubmit="addSuccess" report-submit="true">
+    <view class="column">
+      <text class="tip">持卡人：</text>
+      <view class="inputColumn">
+        <input bindblur="inputNameRight" placeholder='请输入持卡人姓名' name="name" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class="column">
+      <text class="tip">银行卡号：</text>
+      <view class="inputColumn">
+        <input type="number" placeholder='请输入银行卡号' bindblur="inputCardNumRight" name="card_num" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class="column">
+      <text class="tip">开户银行：</text>
+      <view class="inputColumn">
+        <input bindblur="inputBankNameRight" placeholder='请输入开户银行' name="bank_name" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class="column">
+      <text class="tip">支行名称：</text>
+      <view class="inputColumn">
+        <input bindblur="inputSubBankNameRight" placeholder='请输入支行名称' name="sub_bank_name" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class="column">
+      <text class="tip">城市：</text>
+      <view class="inputColumn">
+        <input type="number" placeholder='请输入城市' bindblur="inputCityRight" name="city" placeholder-style="color:#969696" />
+      </view>
+    </view>
+    <view class="column">
+      <text class="tip">设为默认卡：</text>
+      <checkbox-group name="is_default" bindchange="checkboxChange">
+        <label class="checkbox">
+          <checkbox value='1' checked="true"/>
+        </label>
+      </checkbox-group>
+    </view>
+    <button class="button" formType="submit" style='margin-top:30rpx;'>确定</button>
+  </form>
+</view>

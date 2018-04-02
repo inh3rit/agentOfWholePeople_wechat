@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='homgImg'>
+      <image src="/images/home_page.jpg"></image>
+    </view>
+  <view class="register-btn" bindtap='bindRegisterTap'>
+    <text >马上注册 ></text>
+  </view>
+</view>
