@@ -26,7 +26,9 @@ Page({
     } else {
       wx.request({
         method: 'POST',
-        url: 'http://localhost:8080/mini/login', //接口地址
+        // url: 'http://192.168.104.191/mini/login', //接口地址
+        // url: 'http://localhost/mini/login', //接口地址
+        url: 'https://inh3rit.top/mini/login', //接口地址
         data: {
           'passwd': passwd,
           'id_num': id_num

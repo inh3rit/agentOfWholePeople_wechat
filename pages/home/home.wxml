@@ -1,5 +1,43 @@
 <!--pages/home/home.wxml-->
-<view class="container">
+<view class="page">
+  <view class='title'>我的客户</view>
+  <scroll-view scroll-y="true" class="scroll" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="客户信息" scroll-top="我的客户">
+    <view class="table">
+      <view class="tr">
+        <view class='td'>
+          <view wx:for="{{customers}}" wx:for-item="customer" wx:for-index="index">
+            <view style="background:{{index%2 == 0 ? '#F9F9F9' : '#FFFFF'}}">
+              <view>姓名：{{customer.name}}</view>
+              <view>电话：{{customer.telephone}}</view>
+              <view>性别：{{customer.sex == 0 ? '女' : '男'}}</view>
+              <view>说明：{{customer.description}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
   <button class="button" name="add_customer" bindtap="bindCustomerTap" style='margin-top:30rpx;'>新增客户</button>
+
+  <view class='title'>我的银行卡</view>
+  <scroll-view scroll-y="true" class="scroll" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="银行卡信息" scroll-top="我的银行卡">
+    <!-- <view wx:for="{{creditCards}}" wx:for-item="creditCard"> -->
+    <view class="table">
+      <view class="tr">
+        <view class='td'>
+          <view wx:for="{{creditCards}}" wx:for-item="creditCard" wx:for-index="index">
+            <view style="background:{{index%2 == 0 ? '#F9F9F9' : '#FFFFF'}}">
+              <view>银行卡号：{{creditCard.card_num}}</view>
+              <view>开户银行：{{creditCard.bank_name}}</view>
+              <view>支行名称：{{creditCard.sub_bank_name}}</view>
+              <view>城市：{{creditCard.city}}</view>
+              <view>默认卡：{{customer.is_default == 0 ? '否' : '是'}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- </view> -->
+  </scroll-view>
   <button class="button" name="add_creditcard" bindtap="bindCreditcardTap" style='margin-top:30rpx;'>新增银行卡</button>
 </view>

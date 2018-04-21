@@ -1,5 +1,13 @@
 /* pages/home/home.wxss */
 
+.page {
+  margin-left: 2%;
+}
+
+.title {
+  text-align: center
+}
+
 .button {
   width: 80%;
   height: 90rpx;
@@ -11,4 +19,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.table {
+  border:1px solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  width: 98%;
+}
+
+.tr {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width:94%
+}
+.td {
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: left;
+  width:100%
+}
+.th {
+  font-weight: 400;
+  background-color: #dadada
+}
+
+.scroll {
+  height: 300px;
+  width: 98%;
 }

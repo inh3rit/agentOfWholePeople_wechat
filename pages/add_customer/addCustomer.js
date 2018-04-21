@@ -39,7 +39,9 @@ Page({
     } else {
       wx.request({
         method: 'POST',
-        url: 'http://localhost:8080/mini/addCustomer', //接口地址
+        // url: 'http://192.168.104.191/mini/addCustomer', //接口地址
+        // url: 'http://localhost/mini/addCustomer', //接口地址
+        url: 'https://inh3rit.top/mini/addCustomer', //接口地址
         data: {
           'name': name,
           'telephone': telephone,
@@ -65,7 +67,7 @@ Page({
           setTimeout(function () {
             if (wx.reLaunch) {
               wx.reLaunch({
-                url: '../home/home'
+                url: '../home/home?agent_id_num=' + that.agent_id_num
               });
             } else {
               wx.switchTab({

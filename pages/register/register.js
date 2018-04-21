@@ -109,7 +109,9 @@ Page({
     } else {
       wx.request({
         method: 'POST',
-        url: 'http://localhost:8080/mini/register', //接口地址
+        // url: 'http://192.168.104.191/mini/register', //接口地址
+        // url: 'http://localhost/mini/register', //接口地址
+        url: 'https://inh3rit.top/mini/register', //接口地址
         data: {
           'name': name,
           'telephone': telephone,
